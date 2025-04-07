@@ -10,7 +10,7 @@ function toggleOpen() {
 }
 
 // Toggle open-active when transition ends
-function toggleActive(e)
+function toggleActive(e) {
     if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
     }
