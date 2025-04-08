@@ -2,7 +2,7 @@ html {
     box-sizing: border-box;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 20px;
-    background: #ffeaa7;
+    background: whitesmoke;
   }
   
   *, *:before, *:after {
@@ -21,6 +21,7 @@ html {
   }
   
   .panel {
+    margin: 0;
     position: relative;
     overflow: hidden;
     background: #6B0F9C;
@@ -40,7 +41,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 100px #000000;
+    border: none;
     cursor: pointer;
   }
 
@@ -50,19 +51,18 @@ html {
 
   .panel2 {
     background-image: url('Images/whosThat.jpg');
-    background-position: 85%;
+    background-position: 75%;
   }
 
   .panel3 {
     background-image: url(Images/moose.jpeg);
-    background-image: 50%;
   }
 
   .panel3::before {
     content: '';
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(15-px);
+    backdrop-filter: blur(15px);
     background: rgba(0, 0, 0, 0.4);
     z-index: 2;
     transition: all 0.5s ease;
@@ -76,7 +76,8 @@ html {
     flex: 1 0 auto;
     display: flex;
     justify-content: center;
-    align-items: relative;
+    align-items: center;
+    position: relative;
     z-index: 3;
 }
 
@@ -90,6 +91,7 @@ html {
   font-family: 'Amatic SC', cursive;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
   font-size: 2em;
+  color: white;
 }
 
 .panel p:nth-child(2) {
