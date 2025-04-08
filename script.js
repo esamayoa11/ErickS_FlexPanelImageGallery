@@ -20,10 +20,10 @@ function toggleActive(e) {
 // Add event listeners
 panels.forEach(panel => {
     panel.addEventListener('click',toggleOpen);
-    panels.forEach(panel => panel.addEventListener('transitioned', toggleActive));
+    panel.addEventListener('transitionend', toggleActive);
 });
 
 // Reveal blur overlay on panel3
-    panel3.addEventListener('click', function() {
-        this.classList.toggle('revealed');
+panel3.addEventListener('click', function() {
+    this.classList.toggle('revealed');
 });
