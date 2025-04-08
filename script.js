@@ -1,6 +1,23 @@
 const panels = document.querySelectorAll('.panel')
 const panel3 = document.querySelector('.panel3');
 
+// Animate panels in order on load
+window.addEventListener('DOMContentLoaded', () => {
+    panelsArray.forEach((panel, index) => {
+        setTimeout(() => {
+            panel.classList.add('animate-in');
+
+        panel.addEventListener(
+            'animationend', 
+            () => { 
+                panel.classList.remove('animate-in');    
+            }, 
+            { once: true } 
+        );
+    }, index * 1500);
+  });
+});
+
 // Toggle open class
 function toggleOpen() {
     // Close all other panels
