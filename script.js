@@ -1,4 +1,5 @@
 const panels = document.querySelectorAll('.panel')
+const panel3 = document.querySelector('.panel3');
 
 // Toggle open class
 function toggleOpen() {
@@ -17,5 +18,12 @@ function toggleActive(e) {
 }
 
 // Add event listeners
-panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-panels.forEach(panel => panel.addEventListener('transitioned', toggleActive));
+panels.forEach(panel => {
+    panel.addEventListener('click',toggleOpen);
+    panels.forEach(panel => panel.addEventListener('transitioned', toggleActive));
+});
+
+// Reveal blur overlay on panel3
+    panel3.addEventListener('click', function() {
+        this.classList.toggle('revealed');
+});
